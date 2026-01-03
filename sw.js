@@ -1,7 +1,7 @@
 const CACHE_NAME = 'ms-rap-v1.2'; 
 const ASSETS = [
   './',
-  './index.html',
+  './INDEX.html',
   './manifest.json',
   './icon.png'
 ];
@@ -30,4 +30,5 @@ self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => response || fetch(e.request))
   );
+
 });
